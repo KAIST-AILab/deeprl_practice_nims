@@ -16,7 +16,7 @@
     &nbsp;
 3. 가상환경 활성화
     ```bash
-    source activate deeprl_practice
+    source activate deeprl
     ```
     &nbsp;
 4. gym-maze 설치
