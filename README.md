@@ -2,9 +2,36 @@
 - 이 GitHub Repository는 2018년 9월 14일 진행할 성남 AI 교육실습을 위해 제작되었습니다.
 
 ## 설치
-1. 이 GitHub Repository를 사용하고자 하는 로컬로 clone
-2. 가상환경 생성 및 패키지 설치 `conda env create -f environment.yml`
-3. Jupyter notebook 에서 각 실습자료 노트북 파일들(`1_Q-learning_maze.ipynb`, `2_DQN_classic_control.ipynb` )을 실행
+- 새 터미널을 열고 다음 과정들을 통해 설치
+
+  1. Repository를 사용하고자 하는 로컬로 clone :
+    ```bash
+    git clone
+    ```
+  2. 가상환경 생성 및 패키지 설치 :
+    ```bash
+    conda env create -f environment.yml
+    ```
+  3. 가상환경 활성화
+    ```bash
+    source activate deeprl_practice
+    ```
+  4. baselines 설치
+    ```bash
+    cd baselines
+    pip install -e .
+    ```
+
+  5. Jupyter notebook에 가상환경 커널 추가
+  ```bash
+  python -m ipykernel install --user --name deeprl_practice --display-name deeprl_practice
+  ```
+
+## 실행
+- Jupyter notebook 에서 각 실습자료 노트북 파일들(`1_Q-learning_maze.ipynb`, `2_DQN_classic_control.ipynb` )을 실행
+- 실행시 사용 IPython kernel을 위에서 설정해준 커널의 이름인 `deeprl_practice`를 선택해주어야 함
+
+
 
 
 ## 실습 1 : Q-learning in 2D Maze
