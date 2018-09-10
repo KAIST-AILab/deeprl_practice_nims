@@ -174,6 +174,3 @@ Random position from -0.6 to -0.4 with no velocity.
 #### Episode Termination
 
 The episode ends when you reach 0.5 position, or if 200 iterations are reached.
-
-
-### `baselines.deepq`
