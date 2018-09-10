@@ -12,8 +12,7 @@
 2. 가상환경 생성 및 패키지 설치
     ```bash
     cd deeprl_practice
-    conda env create -f environment.yml
-    cd ..
+    conda env create -f environment.ym
     ```
     &nbsp;
 3. 가상환경 활성화
