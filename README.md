@@ -140,7 +140,9 @@ All observations are assigned a uniform random value between ±0.05
 Pole Angle is more than ±12°
 Cart Position is more than ±2.4 (center of the cart reaches the edge of the display)
 Episode length is greater than 200
+ 
  &nbsp;
+ 
 ### MountainCar environment
 ![MountainCarDemo](https://camo.qiitausercontent.com/7c41e4be6e3e6f61b1f91c460813964e37659207/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f3130353333352f61323535356464362d656532312d376234382d646562372d6465646232303234383932622e676966)
 #### Observation
