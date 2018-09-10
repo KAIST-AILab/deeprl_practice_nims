@@ -23,7 +23,6 @@
 4. gym-maze 설치
     ```bash
     python setup.py install
-    cd ..
     ```
     &nbsp;
 5. baselines 설치 (실습2)
