@@ -36,12 +36,12 @@
     ```bash
     python -m ipykernel install --user --name deeprl --display-name deeprl
     ```
-      &nbsp;
 
 ## 실행
 - Jupyter notebook 에서 각 실습자료 노트북 파일들(`1_Q-learning_maze.ipynb`, `2_DQN_classic_control.ipynb` )을 실행하면 됩니다.
 - 실행시 사용 IPython kernel을 위에서 설정해준 커널의 이름인 `deeprl_practice`를 선택해주어야 합니다.
 
+&nbsp;
 
 ## 실습 1 : Q-learning in 2D Maze (`1_Q-learning_maze.ipynb`)
 
@@ -90,6 +90,7 @@ An example of finding the shortest path through the maze using Q-learning can be
 
 ![Solving 20x20 maze with loops and portals using Q-Learning](http://i.giphy.com/rfazKQngdaja8.gif)
 
+&nbsp;
 
 ## 실습 2 : DQN in Classic Control (`2_DQN_classic_control.ipynb`)
 > - 실습 2에서는 OpenAI에서 관리하는 오픈소스 강화학습 패키지 `baselines`를 이용해서 제어문제 환경들인 `CartPole`과 `MountainCar`를 학습시켜보겠습니다.
@@ -106,6 +107,7 @@ A pole is attached by an un-actuated joint to a cart, which moves along a fricti
 #### Observation
 
 Type: Box(4)
+
 | Num | Observation          | Min      | Max     |
 |-----|----------------------|----------|---------|
 | 0   | Cart Position        | -2.4     | 2.4     |
