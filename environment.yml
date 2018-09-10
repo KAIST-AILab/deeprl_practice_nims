@@ -1,4 +1,4 @@
-name: deeprl2
+name: deeprl
 channels:
 - conda-forge
 - defaults
@@ -33,5 +33,5 @@ dependencies:
   - opencv-python==3.4.2.17
   - tensorboard==1.10.0
   - tensorflow==1.10.1
-prefix: /opt/conda/envs/deeprl2
+prefix: /opt/conda/envs/deeprl
 
