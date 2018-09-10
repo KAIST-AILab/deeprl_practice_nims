@@ -43,7 +43,7 @@
 - 실행시 사용 IPython kernel을 위에서 설정해준 커널의 이름인 `deeprl_practice`를 선택해주어야 합니다.
 
 
-## 실습 1 : Q-learning in 2D Maze
+## 실습 1 : Q-learning in 2D Maze (`1_Q-learning_maze.ipynb`)
 
 > 실습 1은 https://github.com/MattChanTK/gym-maze 를 기반으로 제작되었습니다.
 
@@ -91,5 +91,87 @@ An example of finding the shortest path through the maze using Q-learning can be
 ![Solving 20x20 maze with loops and portals using Q-Learning](http://i.giphy.com/rfazKQngdaja8.gif)
 
 
-## 실습 2 : Q-learning in 2D Maze
-- `2_DQN_classic_control.ipynb`
+## 실습 2 : DQN in Classic Control (`2_DQN_classic_control.ipynb`)
+> - 실습 2에서는 OpenAI에서 관리하는 오픈소스 강화학습 패키지 `baselines`를 이용해서 제어문제 환경들인 `CartPole`과 `MountainCar`를 학습시켜보겠습니다.
+이 두 환경 모두 OpenAI Gym에 정의되어 있습니다.
+> - 각 환경(environment)의 설명은 [OpenAI Gym Wiki](https://github.com/openai/gym/wiki)에서 가져왔습니다.
+
+### CartPole environment
+![CartPoleDemo](https://mapehe.github.io/images/cart_pole.gif)
+
+#### Description
+
+A pole is attached by an un-actuated joint to a cart, which moves along a frictionless track. The pendulum starts upright, and the goal is to prevent it from falling over by increasing and reducing the cart's velocity.
+
+#### Observation
+
+Type: Box(4)
+| Num | Observation          | Min      | Max     |
+|-----|----------------------|----------|---------|
+| 0   | Cart Position        | -2.4     | 2.4     |
+| 1   | Cart Velocity        | -Inf     | Inf     |
+| 2   | Pole Angle           | ~ -41.8° | ~ 41.8° |
+| 3   | Pole Velocity At Tip | -Inf     | Inf     |
+
+#### Actions
+
+Type: Discrete(2)
+
+
+| Num | Action                 |
+|-----|------------------------|
+| 0   | Push cart to the left  |
+| 1   | Push cart to the right |
+
+> Note: The amount the velocity is reduced or increased is not fixed as it depends on the angle the pole is pointing. This is because the center of gravity of the pole increases the amount of energy needed to move the cart underneath it
+
+#### Reward
+
+Reward is 1 for every step taken, including the termination step
+
+#### Starting State
+
+All observations are assigned a uniform random value between ±0.05
+
+#### Episode Termination
+
+Pole Angle is more than ±12°
+Cart Position is more than ±2.4 (center of the cart reaches the edge of the display)
+Episode length is greater than 200
+
+### MountainCar environment
+![MountainCarDemo](https://camo.qiitausercontent.com/7c41e4be6e3e6f61b1f91c460813964e37659207/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f3130353333352f61323535356464362d656532312d376234382d646562372d6465646232303234383932622e676966)
+#### Observation
+
+Type: Box(2)
+
+Num | Observation  | Min  | Max  
+----|--------------|------|----   
+0   | position     | -1.2 | 0.6
+1   | velocity     | -0.07| 0.07
+
+
+#### Actions
+
+Type: Discrete(3)
+
+Num | Action|
+----|-------------|
+0   | push left   |
+1   | no push     |
+2   | push right  |
+
+#### Reward
+
+-1 for each time step, until the goal position of 0.5 is reached. As with MountainCarContinuous v0, there is no penalty for climbing the left hill, which upon reached acts as a wall.
+
+#### Starting State
+
+Random position from -0.6 to -0.4 with no velocity.
+
+#### Episode Termination
+
+The episode ends when you reach 0.5 position, or if 200 iterations are reached.
+
+
+### `baselines.deepq`
