@@ -11,6 +11,7 @@
     &nbsp;
 2. 가상환경 생성 및 패키지 설치
     ```bash
+    cd deeprl_practice
     conda env create -f environment.yml
     ```
     &nbsp;
@@ -28,6 +29,7 @@
     ```bash
     cd baselines
     pip install -e .
+    cd ..
     ```
     &nbsp;
 6. Jupyter notebook에 가상환경 커널 추가
