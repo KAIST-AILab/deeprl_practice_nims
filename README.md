@@ -13,6 +13,7 @@
     ```bash
     cd deeprl_practice
     conda env create -f environment.yml
+    cd ..
     ```
     &nbsp;
 3. 가상환경 활성화
@@ -22,13 +23,16 @@
     &nbsp;
 4. gym-maze 설치
     ```bash
+    cd gym-maze
     python setup.py install
+    cd ..
     ```
     &nbsp;
 5. baselines 설치 (실습2)
     ```bash
     cd baselines
     pip install -e .
+    cd ..
     ```
     &nbsp;
 6. Jupyter notebook에 가상환경 커널 추가
