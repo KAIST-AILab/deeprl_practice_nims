@@ -22,7 +22,6 @@
     &nbsp;
 4. gym-maze 설치
     ```bash
-    cd gym-maze
     python setup.py install
     cd ..
     ```
